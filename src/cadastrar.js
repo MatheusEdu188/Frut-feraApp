@@ -9,21 +9,19 @@ function criarCartao(fruteira){
 
 
     const cartao = `
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-      
-        <div class="card-body">
-        <h5 class="card-title">
-          ${fruteira.nomePopular} <br>
-          <span class="text-muted">${fruteira.nomeCientifico}</span>
-        </h5>
-        <p class="card-text">Produção média: ${fruteira.producao} Kg</p>
-        <p class="card-text">Data do plantio: ${fruteira.dataPlantio}</p>
-        <p class="card-text"><strong>Idade: ${idadeMeses} meses</strong></p>
-      </div>
-    </div>
-  `;
-
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h6>ID: ${fruteira.id}</h6>
+    <h5 class="card-title">
+      ${fruteira.nomePopular} <br>
+      <span class="text-muted">${fruteira.nomeCientifico}</span>
+    </h5>
+    <p class="card-text">Produção média: ${fruteira.producao} Kg</p>
+    <p class="card-text">Data do plantio: ${fruteira.dataPlantio}</p>
+    <p class="card-text"><strong>Idade: ${idadeMeses} meses</strong></p>
+  </div>
+</div>
+`;
     const novaDiv = document.createElement("div");
     novaDiv.classList.add("col-md-4", "mb-3");
     novaDiv.innerHTML = cartao;
