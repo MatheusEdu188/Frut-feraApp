@@ -1,3 +1,6 @@
+
+
+//lista com todos os produtos e suas informações
 const produtos = [
   {
     id: 0,
@@ -34,9 +37,9 @@ const cartas = document.querySelector(".cartas")
 const cartões = document.querySelector("#cartões")
 
 
-
+//vai inserir os itens da lista na variavel cartao. 
 if (cartas) {
-  let idB = 0;
+  
   for (let produto of produtos) {
     let cartao = `
       <div class="cards">
@@ -50,7 +53,8 @@ if (cartas) {
         </div>
       </div>
     `;
-    idB++;
+
+    //cria uma nova div para esse elemento ser inserido nela
     const NovaDiv = document.createElement("div");
     NovaDiv.classList.add("cards", "col-md-4");
     NovaDiv.innerHTML = cartao;
