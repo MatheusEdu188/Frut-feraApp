@@ -1,9 +1,9 @@
 
 
-//lista com todos os produtos e suas informações
+
 const produtos = [
   {
-    id: 0,
+    
     nome: "Maçã",
     nomeCientifico:"Malus domestica",
     descricao: "Maçã fresca por KG.",
@@ -12,7 +12,7 @@ const produtos = [
     img: "assets/imagens/maca.jpg"
   },
   {
-    id: 1,
+    
     nome: "Caju",
     nomeCientifico:"Anacardium occidentale",
     descricao: "Caju fresco por KG.",
@@ -20,7 +20,7 @@ const produtos = [
     img: "assets/imagens/caju.jpg"
   },
   {
-    id: 2,
+    
     nome: "Manga",
     nomeCientifico:"Mangifera indica",
     descricao: "Manga fresca por KG.",
@@ -28,7 +28,7 @@ const produtos = [
     img: "assets/imagens/manga (2).jpg"
   },
   
-];
+]; //lista com todos os produtos e suas informações
 
 
 
@@ -37,9 +37,9 @@ const cartas = document.querySelector(".cartas")
 const cartões = document.querySelector("#cartões")
 
 
-//vai inserir os itens da lista na variavel cartao. 
+
 if (cartas) {
-  
+  //vai inserir os itens da lista na variavel cartao. 
   for (let produto of produtos) {
     let cartao = `
       <div class="cards">
@@ -48,17 +48,18 @@ if (cartas) {
           <div class="card-body">
             <h5 class="card-title">${produto.nome}/<span class="nomeCientifico">${produto.nomeCientifico}</span></h5>
             <p class="card-text text-truncate">${produto.descricao}</p>
-            <a href="#" data-id="${idB}" class="btnComprar btn btn-primary">R$ ${produto.preco}</a>
           </div>
         </div>
       </div>
-    `;
+      `;  // percorre a lista de produtos e para cada produto, ele adiciona um card no html
 
-    //cria uma nova div para esse elemento ser inserido nela
-    const NovaDiv = document.createElement("div");
-    NovaDiv.classList.add("cards", "col-md-4");
-    NovaDiv.innerHTML = cartao;
-    cartas.appendChild(NovaDiv);
+      
+    
+    const NovaDiv = document.createElement("div"); //cria uma nova div para esse elemento ser inserido nela
+
+    NovaDiv.classList.add("cards", "col-md-4"); //ele vai adicionar essas classes que são do bootstrap na nova div criada
+    NovaDiv.innerHTML = cartao; //procura a nova div criada e após isso, armazena dentro dela o conteudo da variavel cartão que está feita acima
+    cartas.appendChild(NovaDiv); //agora ele vai buscar o elemento html com a class ou id(nesse caso class) correspondente e vai adicionar nela a nova div criada
   }
 }
 

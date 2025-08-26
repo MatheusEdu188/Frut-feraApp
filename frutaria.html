@@ -12,7 +12,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"> <!--barra de navegação do bootstrap -->
     <div class="container-fluid">
 
       <a class="navbar-brand barradireita" href="#">
@@ -20,17 +20,17 @@
           class="d-inline-block align-text-top">
         Frutaria
         <a href="./index.html">
-          <h2 class="itensBarraDireita">Home</h2>
+          <h2 class="itensBarraDireita">Home</h2> <!--esse link traz de volta para o home d a pagina, mas nesse cado, já estamos no home -->
         </a>
         <a href="./frutaria.html">
-          <h2 class="itensBarraDireita">Cadastrar Item</h2>
+          <h2 class="itensBarraDireita">Cadastrar Item</h2> <!--link para -->
         </a>
 
       </a>
 
 
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <!--aqui se trata de um botão do offcanvas proprio da barra de navegação coletada no bootstrap -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -42,9 +42,10 @@
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              
+
             
-
-
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -61,8 +62,13 @@
             </li>
           </ul>
 
+
+
+
+
+
           <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <!--novamente uma barra de pesquisa do proprio bootstrap-->
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
@@ -70,12 +76,15 @@
     </div>
   </nav>
 
+
+
+
   <main>
     <div class="pesquisa">
-      <input type="text" class="inputBusca" placeholder="Busca">
+      <input type="text" class="inputBusca" placeholder="Busca"> <!--se trata de uma barra de pesquisa, que não tem funcionamento, pois não foi requisitado, mas segue o modelo do site da cafeteria-->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         +
-      </button>
+      </button><!--esse botão abre o modal do formulario-->
     </div>
 
     <div class="cartas row row-cols-1 row-cols-md-3 g-4">
@@ -85,7 +94,7 @@
 
 
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <!--modal do formulario para adicionar os cards ao html-->
       <div class="modal-dialog">
         <div class="modal-content">
 
@@ -139,28 +148,6 @@
 
 
 
-
-
-
-
-  <div class="modal" id="modal2" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Carrinho</h5>
-          <button type="button" id="fecharCarrinho" class="btn-close" data-bs-dismiss="modal"
-            aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="carrinho-corpo">
-          <p>Adicione Itens ao Carrinho.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" id="comprar" class="btn btn-primary">Obter 0R$</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
